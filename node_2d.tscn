@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://bfpae87orb2wu"]
+
+[ext_resource type="Texture2D" uid="uid://c5cw4jj2qcvay" path="res://sprite/coins.png" id="1_0e48y"]
+[ext_resource type="Script" uid="uid://d04bqeb3boxap" path="res://sprite/ClickableCounter.cs" id="2_0e48y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0hol4"]
+size = Vector2(325, 289)
+
+[node name="Node2D" type="Node2D" unique_id=24736483]
+position = Vector2(1, 0)
+
+[node name="Area2D" type="Area2D" parent="." unique_id=128408176]
+position = Vector2(131, 121)
+collision_layer = 5
+script = ExtResource("2_0e48y")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=1489065934]
+position = Vector2(162.00003, 146.00002)
+scale = Vector2(0.15795904, 0.14160156)
+texture = ExtResource("1_0e48y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1886127173]
+position = Vector2(161, 147)
+shape = SubResource("RectangleShape2D_0hol4")
+
+[node name="CounterLabel" type="Label" parent="." unique_id=1555785026]
+offset_left = 564.0
+offset_top = 70.0
+offset_right = 944.0
+offset_bottom = 137.0
+theme_override_font_sizes/font_size = 48
+horizontal_alignment = 1
+vertical_alignment = 1
